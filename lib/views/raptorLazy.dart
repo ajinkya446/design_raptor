@@ -15,14 +15,12 @@ part of design_raptor;
 class RaptorLoading extends StatefulWidget {
   final List listDetail;
   final int loadCount;
-  final bool? isShwon;
   final IndexedWidgetBuilder itemBuilder;
   final bool? shrinkWrap;
   final double? itemExtent;
   RaptorLoading(
       {required this.listDetail,
       required this.loadCount,
-      this.isShwon,
       required this.itemBuilder,
       this.shrinkWrap,
       this.itemExtent});
@@ -67,14 +65,11 @@ class _RaptorLoadingState extends State<RaptorLoading> {
 
   @override
   Widget build(BuildContext context) {
-    return Scrollbar(
-      isAlwaysShown: widget.isShwon,
-      child: ListView.builder(
-          controller: scrollController,
-          itemExtent: widget.itemExtent ?? 80,
-          shrinkWrap: widget.shrinkWrap ?? false,
-          itemCount: maxLength,
-          itemBuilder: widget.itemBuilder),
-    );
+    return ListView.builder(
+        controller: scrollController,
+        itemExtent: widget.itemExtent ?? 80,
+        shrinkWrap: widget.shrinkWrap ?? false,
+        itemCount: maxLength,
+        itemBuilder: widget.itemBuilder);
   }
 }

@@ -31,5 +31,27 @@ This is for button design:
 
 This is for Dialog box design:
 
-    raptorDialogView(
-              context: context, message: "Please Wait while We perform")
+    ElevatedButton(
+                onPressed: () {
+                  showDialog(
+                    context: context,
+                    barrierDismissible: false,
+                    builder: (_) => RaptorDialog(
+                        size: MediaQuery.of(context).size,
+                        dialogText:
+                            Text("Demo app", style: TextStyle(fontSize: 20))),
+                  );
+                },
+                child: Text("Start Animation"))
+
+
+Animated Icon button:
+
+    RaptorTouchAnimation(
+                onPressed: () => print("Hii"),
+                animatedColor: Colors.red,
+                defaultColor: Colors.grey,
+                icon: Icons.topic,
+                startAnimationSize: 30,
+                stopAnimationSize: 50,
+              )
