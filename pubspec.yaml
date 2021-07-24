@@ -1,8 +1,8 @@
 name: design_raptor
 description: This package helps to create new design for flutter project.
 version: 0.0.1
-author: Ajinkya446@gmail.com
-homepage:
+author: Ajinkya Aher
+homepage: https://github.com/ajinkya446/design_raptor.git
 
 environment:
   sdk: ">=2.12.0 <3.0.0"
