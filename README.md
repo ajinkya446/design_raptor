@@ -6,7 +6,7 @@ It is powerfull, easy for flutter/dart project to design screens. It Support laz
 
 # Add Dependency:
     dependecies: 
-        design_raptor: 0.0.1
+        design_raptor: 0.0.2+1
 
 # Super Simple to use:
 
@@ -26,7 +26,7 @@ This is for button design:
           icon: Icon(Icons.home),
           color: Colors.red,
           onSubmit: () => print("hello"),
-          title: "Demo",
+          title: Text("Demo"),
         )
 
 This is for Dialog box design:
