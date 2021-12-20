@@ -5,11 +5,7 @@
 
 name: Dart
 
-on:
-  push:
-    branches: [ main ]
-  pull_request:
-    branches: [ main ]
+on: [push]
 
 # on: push    # Default will running for every branch.
     
@@ -28,12 +24,8 @@ jobs:
     # Setup the flutter environment.
     - uses: subosito/flutter-action@v1
       with:
-        channel: 'stable' # 'dev', 'alpha', default to: 'stable'
-        # flutter-version: '1.12.x' # you can also specify exact version of flutter
-    
-    - uses: subosito/flutter-action@v1
-      with:
-        channel: 'stable' # or: 'beta', 'dev' or 'master'
+        channel: 'stable'
+  
     - run: flutter pub get
     - run: flutter test
     - run: flutter build apk
